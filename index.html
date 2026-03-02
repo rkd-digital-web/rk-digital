@@ -3,131 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RD Mega Portal | UK Jobs, Admissions & Deals</title>
+    <title>Rajesh Mega Portal | Uttarakhand Career & Shopping Guide</title>
+    
+    <!-- Google AdSense Placeholder -->
+    <script async src="https://pagead2.googlesyndication.com" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
-        :root { --primary: #1a2a6c; --accent: #ff9900; --success: #2ecc71; --medical: #e74c3c; --bg: #f4f7f6; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: var(--bg); scroll-behavior: smooth; }
-        nav { background: var(--primary); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav a { color: white; margin: 0 8px; text-decoration: none; font-size: 11px; font-weight: 600; text-transform: uppercase; }
-        .hero { background: linear-gradient(45deg, #1a2a6c, #b21f1f); height: 160px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px; }
-        .section-title { text-align: center; margin: 30px auto 15px; font-size: 22px; color: var(--primary); font-weight: 800; border-bottom: 4px solid var(--accent); width: fit-content; padding-bottom: 5px; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 10px; max-width: 1200px; margin: 0 auto; }
-        .box { width: 100%; max-width: 340px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 5px solid var(--primary); }
-        .card-content { padding: 15px; }
-        .link-list { list-style: none; padding: 0; margin: 0; }
-        .link-list li { padding: 10px 0; border-bottom: 1px dotted #ccc; }
-        .link-list a { text-decoration: none; color: #333; font-weight: 600; display: flex; justify-content: space-between; font-size: 14px; }
-        .hot-tag { background: red; color: white; font-size: 9px; padding: 2px 6px; border-radius: 4px; animation: blink 1s infinite; }
-        @keyframes blink { 0% {opacity: 1;} 50% {opacity: 0.5;} 100% {opacity: 1;} }
-        .btn-amazon { background: #FF9900; color: #000; padding: 10px; text-decoration: none; border-radius: 6px; display: block; text-align: center; font-weight: bold; margin-top: 10px; font-size: 13px; border: 1px solid #cc7a00; }
-        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 2000; text-decoration: none; }
+        :root { --primary: #064e3b; --accent: #10b981; --bg: #f0fdf4; --card-bg: #ffffff; --text: #1e293b; --secondary: #0d9488; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--bg); color: var(--text); padding-bottom: 80px; scroll-behavior: smooth; }
+        
+        header { background: var(--primary); color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .ticker-wrap { background: #d1fae5; color: #065f46; padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: bold; font-size: 13px; border-bottom: 2px solid var(--accent); }
+        .ticker { display: inline-block; animation: scroll 35s linear infinite; }
+        @keyframes scroll { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+
+        /* Iconic Grid */
+        .quick-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; max-width: 1100px; margin: 0 auto; }
+        .quick-item { background: white; padding: 18px; border-radius: 16px; text-align: center; text-decoration: none; color: var(--primary); font-weight: 800; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-bottom: 4px solid var(--accent); transition: 0.3s; }
+        .quick-item:hover { transform: scale(1.05); background: #f0fdf4; }
+        .quick-item span { display: block; font-size: 28px; margin-bottom: 5px; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 15px; }
+        .section-title { font-size: 24px; font-weight: 800; margin: 35px 0 15px; color: var(--primary); display: flex; align-items: center; gap: 12px; border-left: 6px solid var(--accent); padding-left: 15px; }
+        
+        .box { background: var(--card-bg); border-radius: 20px; padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; }
+        h3 { margin-top: 0; font-size: 20px; color: var(--secondary); border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        p { font-size: 15px; color: #475569; text-align: justify; line-height: 1.7; }
+
+        /* Tables & Lists */
+        .rich-list { list-style: none; padding: 0; }
+        .rich-list li { background: #f8fafc; padding: 12px; border-radius: 10px; margin-bottom: 10px; border-left: 4px solid var(--accent); font-size: 14px; }
+        .rich-list b { color: var(--primary); }
+
+        .btn { display: inline-block; width: 100%; text-align: center; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 14px; margin-top: 12px; box-sizing: border-box; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-amazon { background: #fbbf24; color: black; border-bottom: 4px solid #d97706; }
+        .btn-main { background: var(--primary); color: white; border-bottom: 4px solid #042f2e; }
+
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 15px; border-top: 1px solid #e2e8f0; z-index: 1001; }
+        .bottom-nav a { text-decoration: none; color: #64748b; font-size: 11px; text-align: center; font-weight: 700; }
+        .bottom-nav a span { display: block; font-size: 22px; }
+        .bottom-nav a.active { color: var(--accent); }
+        
+        .wa-float { position: fixed; bottom: 90px; right: 20px; background: #22c55e; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); z-index: 2000; text-decoration: none; }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="#admission">Admissions</a>
-    <a href="#jobs">Jobs & Admit Cards</a>
-    <a href="#books">Study Material</a>
-    <a href="#fashion">Fashion</a>
-</nav>
+<header>
+    <h1>Rajesh Mega Portal 🏔️</h1>
+</header>
 
-<div class="hero">
-    <h1>RD Mega Portal</h1>
-    <p>Uttarakhand's All-in-One Hub</p>
+<div class="ticker-wrap">
+    <div class="ticker">
+        🌟 UK Board Results 2026: Official Link Coming Soon &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 🏫 Navodaya Class 6th Forms Out &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 💻 Laptops & Accessories: 60% Off on Amazon
+    </div>
 </div>
 
-<!-- 🎓 1. ADMISSION SECTION -->
-<h2 id="admission" class="section-title">Admissions 🎓</h2>
+<div class="quick-grid">
+    <a href="#college" class="quick-item"><span>🏛️</span>Colleges</a>
+    <a href="#schools" class="quick-item"><span>🎒</span>Schools</a>
+    <a href="#jobs" class="quick-item"><span>💼</span>Jobs 2026</a>
+    <a href="#shopping" class="quick-item"><span>🛍️</span>Shopping</a>
+</div>
+
 <div class="container">
+ <h2 id="jobs" class="section-title">Uttarakhand Govt Jobs 2026 💼</h2>
+    <div class="box" style="border-top: 6px solid #10b981;">
+        <h3 style="color: #065f46;">Latest Job Recruitment Dashboard</h3>
+        <p>UK Police, UKSSSC aur UKPSC ki sabse tez updates niche di gayi hain.</p>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; min-width: 300px;">
+                <tr style="background: #f1f5f9; text-align: left;">
+                    <th style="padding: 10px; border: 1px solid #e2e8f0;">Job Name</th>
+                    <th style="padding: 10px; border: 1px solid #e2e8f0;">Qual.</th>
+                    <th style="padding: 10px; border: 1px solid #e2e8f0;">Apply Link</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><b>UK Police</b></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">12th Pass</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><a href="https://psc.uk.gov.in" target="_blank" style="background: #2563eb; color: white; padding: 5px 10px; border-radius: 5px; text-decoration: none; font-size: 12px; display: inline-block;">Apply</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><b>UKSSSC Group C</b></td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;">12th/Grad</td>
+                    <td style="padding: 10px; border: 1px solid #e2e8f0;"><a href="https://sssc.uk.gov.in" target="_blank" style="background: #2563eb; color: white; padding: 5px 10px; border-radius: 5px; text-decoration: none; font-size: 12px; display: inline-block;">Apply</a></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="margin-top: 15px; background: #f0fdf4; padding: 15px; border-radius: 12px; border-left: 5px solid #22c55e;">
+            <p style="font-size: 13px; margin: 0; color: #166534;"><b>Selection Criteria:</b> Physical Test (Police) + Written Exam (Hindi, UK GK, Reasoning) + Medical Verification.</p>
+        </div>
+    </div>
+    <!-- 🩺 MEDICAL COLLEGES SECTION -->
+    <h2 id="college" class="section-title">🩺 Medical Colleges in Uttarakhand</h2>
     <div class="box">
-        <div class="card-content">
-            <h3>School Entrance Only</h3>
-            <ul class="link-list">
-                <li><a href="https://aissee.nta.nic.in" target="_blank">Sainik School Entrance <span class="hot-tag">LIVE</span></a></li>
-                <li><a href="https://navodaya.gov.in" target="_blank">JNV Class 6th/9th Form</a></li>
-                <li><a href="#" target="_blank">RIMS Dehradun Exam</a></li>
-            </ul>
-        </div>
+        <h3>Top MBBS/BDS Institutes List</h3>
+        <p>Uttarakhand offers premium medical education. To secure a seat, students must qualify for **NEET UG**. Counseling is conducted by HNB Medical University.</p>
+        <ul class="rich-list">
+            <li><b>AIIMS Rishikesh:</b> Premier Central Institute. Admission via NEET.</li>
+            <li><b>GMC Haldwani:</b> Established in 1997. Government College with low fees.</li>
+            <li><b>Doon Medical College:</b> Located in Dehradun. Top clinical exposure.</li>
+            <li><b>VCSG Srinagar (Garhwal):</b> Highly reputed govt college in the hills.</li>
+            <li><b>SGRRMC & Himalayan (HIHT):</b> Top Private Medical Options in Dehradun.</li>
+        </ul>
+        <a href="APNA_AMAZON_LINK" class="btn btn-amazon">🛒 Buy NEET Prep Kit (Amazon)</a>
     </div>
-    <div class="box" style="border-color: var(--medical);">
-        <div class="card-content">
-            <h3>Courses After 12th & Colleges</h3>
-            <ul class="link-list">
-                <li><a href="#" target="_blank">Engineering (JEE) & Medical (NEET)</a></li>
-                <li><a href="#" target="_blank">CUET Central Universities</a></li>
-                <li><a href="#" target="_blank">Best Colleges in Uttarakhand</a></li>
-                <li><a href="#" target="_blank">B.Sc Agriculture (Pantnagar)</a></li>
-            </ul>
-        </div>
+<!-- 🏗️ ENGINEERING COLLEGES SECTION START -->
+    <h2 id="engineering" class="section-title">🏗️ Engineering Colleges in Uttarakhand</h2>
+    <div class="box" style="border-top: 6px solid #0891b2;">
+        <h3>Top B.Tech/B.E. Institutes List</h3>
+        <p>Uttarakhand mein Engineering ke liye top government aur private options hain. Admission ke liye **JEE Mains** exam sabse zaroori hai. Uttarakhand Technical University (UTU) counseling manage karti hai.</p>
+        <ul class="rich-list">
+            <li><b>IIT Roorkee:</b> India ka sabse purana engineering college. Admission via **JEE Advanced**.</li>
+            <li><b>NIT Uttarakhand (Srinagar):</b> Top placement records. Admission via **JEE Mains** (JOSAA Counseling).</li>
+            <li><b>GB Pant University (Pantnagar):</b> Agriculture aur Engineering ke liye world-famous. Iska apna entrance exam hota hai.</li>
+            <li><b>THDC-IHET (Tehri):</b> Tehri mein sthit Govt institute jo Hydro Engineering ke liye best hai.</li>
+            <li><b>Graphic Era & DIT University:</b> Dehradun ke top private engineering options jinme achhi placements milti hain.</li>
+        </ul>
+        <a href="https://jeemain.nta.nic.in" class="btn btn-main" style="background:#0891b2;">Official JEE Mains Link 🔗</a>
+        <a href="APNA_AMAZON_LINK" class="btn btn-amazon">🛒 Buy JEE Mains Guide (Amazon)</a>
     </div>
-</div>
+    <!-- 🏗️ ENGINEERING COLLEGES SECTION END -->
+      <!-- 🎨 STEP 4: ARTS & COMMERCE CAREER SECTION START -->
+    <h2 id="arts-commerce" class="section-title">🎨 Career Options: Arts & Commerce</h2>
+    <div class="box" style="border-top: 6px solid #8b5cf6;">
+        <h3>Best Courses & Colleges After 12th</h3>
+        <p>Science ke alawa Uttarakhand mein Arts aur Commerce ke students ke liye world-class institutes hain. Admission ke liye **CUET UG** aur **CLAT** jaise exams dene hote hain.</p>
+        
+        <div style="margin-top: 15px;">
+            <!-- Hotel Management -->
+            <div style="background: #fdf4ff; padding: 15px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #d946ef;">
+                <h4 style="margin: 0; color: #a21caf;">1. Hotel Management (BHM)</h4>
+                <p style="font-size: 13px; margin: 8px 0;">
+                    <b>Best College:</b> IHM Dehradun (Institute of Hotel Management).<br>
+                    <b>Exam:</b> NCHMCT JEE (National Level).<br>
+                    <b>Scope:</b> World-wide Hotels, Airlines aur Cruise ships mein career.
+                </p>
+                <a href="http://www.ihmdehradun.com" target="_blank" style="color:#d946ef; font-weight:bold; text-decoration:none; font-size:13px;">IHM Dehradun Official Site 🔗</a>
+            </div>
 
-<!-- 💼 2. JOBS & ADMIT CARDS -->
-<h2 id="jobs" class="section-title">Jobs & Admit Cards 💼</h2>
-<div class="container">
-    <div class="box" style="border-color: var(--success);">
-        <div class="card-content">
-            <h3>Latest Govt Jobs</h3>
-            <ul class="link-list">
-                <li><a href="https://psc.uk.gov.in" target="_blank">UKPSC (Gazetted)</a></li>
-                <li><a href="https://sssc.uk.gov.in" target="_blank">UKSSSC (Group C)</a></li>
-                <li><a href="#" target="_blank">UK Police Bharti 2026</a></li>
-                <li><a href="https://ssc.gov.in" target="_blank">SSC Central Jobs</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="box" style="border-color: #f1c40f;">
-        <div class="card-content">
-            <h3>Admit Cards</h3>
-            <ul class="link-list">
-                <li><a href="#" target="_blank">SSC GD Constable <span class="hot-tag">NEW</span></a></li>
-                <li><a href="#" target="_blank">UKPSC Exam City Details</a></li>
-                <li><a href="#" target="_blank">Download Hall Tickets</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+            <!-- Management & Commerce -->
+            <div style="background: #f0f9ff; padding: 15px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #0ea5e9;">
+                <h4 style="margin: 0; color: #0369a1;">2. BBA / B.Com / Eco Hons</h4>
+                <p style="font-size: 13px; margin: 8px 0;">
+                    <b>Best Colleges:</b> Doon University, HNB Garhwal University.<br>
+                    <b>Exam:</b> CUET UG (Common University Entrance Test).<br>
+                    <b>Specialization:</b> Finance, Marketing aur Human Resource.
+                </p>
+                <a href="https://cuet.samarth.ac.in" target="_blank" style="color:#0ea5e9; font-weight:bold; text-decoration:none; font-size:13px;">Apply via CUET 🔗</a>
+            </div>
 
-<!-- 📚 3. STUDY MATERIAL & BOOKS (AFFILIATE) -->
-<h2 id="books" class="section-title">Study Material & Books 📚</h2>
-<div class="container">
+            <!-- Law -->
+            <div style="background: #fff7ed; padding: 15px; border-radius: 12px; border-left: 5px solid #f97316;">
+                <h4 style="margin: 0; color: #c2410c;">3. Law (BA LLB / BBA LLB)</h4>
+                <p style="font-size: 13px; margin: 8px 0;">
+                    <b>Best Colleges:</b> Law College Dehradun (LCD), Uttaranchal University.<br>
+                    <b>Exam:</b> CLAT (Common Law Admission Test) ya LSAT.<br>
+                    <b>Duration:</b> 5 Years Integrated Course.
+                </p>
+            </div>
+        </div>
+
+        <a href="APNA_AMAZON_LINK" class="btn btn-amazon" style="background:#fbbf24; color:black; text-decoration:none; display:block; text-align:center; padding:12px; border-radius:10px; font-weight:bold; margin-top:10px;">🛒 Buy BBA/BHM Entrance Books (Amazon)</a>
+    </div>
+    <!-- 🎨 ARTS & COMMERCE SECTION END -->
+    <!-- 🎒 SCHOOL ENTRANCE SECTION -->
+    <h2 id="schools" class="section-title">🎒 School Entrance Exams (Class 6th)</h2>
     <div class="box">
-        <div class="card-content">
-            <h3>Best Books (Amazon)</h3>
-            <ul class="link-list">
-                <li><a href="https://amzn.to/4b0m3QH" target="_blank">UK GK Special Book</a></li>
-                <li><a href="https://amzn.to/4b0m3QH" target="_blank">Sainik School Guide 2026</a></li>
-            </ul>
-            <a href="APNA_AMAZON_LINK" class="btn-amazon" target="_blank">Buy Study Material on Amazon</a>
-        </div>
+        <h3>Jawahar Navodaya & Sainik School Guide</h3>
+        <p>JNV aur Sainik School Uttarakhand ke bacchon ke liye sabse behtareen vikalp hain. Inki selection criteria aur dates niche di gayi hain:</p>
+        <ul class="rich-list">
+            <li><b>Navodaya (JNV):</b> 
+                <b>Forms:</b> Sept-Oct | <b>Last Date:</b> Nov | <b>Criteria:</b> Candidate must be in 5th Std in UK state. 75% seats for rural kids.</li>
+            <li><b>Sainik School Ghorakhal:</b> 
+                <b>Forms:</b> Nov | <b>Last Date:</b> Dec | <b>Criteria:</b> Entrance Exam (AISSEE) + Medical Test. Selection is based on merit.</li>
+        </ul>
+        <a href="https://navodaya.gov.in" class="btn btn-main">Official Navodaya Link</a>
+        <a href="APNA_AMAZON_LINK" class="btn btn-amazon">🛒 Best Sainik School Guide 2026</a>
     </div>
-</div>
 
-<!-- 👕 4. FASHION & TRENDING (AFFILIATE) -->
-<h2 id="fashion" class="section-title">Fashion & Deals 👕</h2>
+    <!-- 🎨 ART & COMMERCE SECTION -->
+    <h2 class="section-title">🎨 Career for Art & Commerce Students</h2>
+    <div class="box">
+        <h3>Best Courses After 12th (Non-Science)</h3>
+        <p>Science ke alawa bhi Uttarakhand mein bahut scope hai. CUET ke madhyam se aap top universities mein admission le sakte hain.</p>
+        <ul class="rich-list">
+            <li><b>Doon University (Arts):</b> Best for Languages, Sociology, and Psychology.</li>
+            <li><b>IHM Dehradun (Commerce/Arts):</b> National level Hotel Management Institute.</li>
+            <li><b>HNBGU (Commerce):</b> Best B.Com and BBA faculty in Srinagar & Tehri.</li>
+            <li><b>Law (CLAT):</b> Admission in National Law Universities or Local LLB.</li>
+        </ul>
+        <a href="https://cuet.samarth.ac.in" class="btn btn-main">Apply for CUET UG</a>
+    </div>
+
+    <!-- 💻 TECH & ACCESSORIES (AFFILIATE) -->
+    <h2 id="shopping" class="section-title">💻 Laptops & Accessories</h2>
+    <div class="box">
+        <h3>Best Tech for Students & Gamers</h3>
+        <p>Education portal ke saath-saath hum laye hain exclusive Amazon Deals on Laptops, Headphones, aur Accessories.</p>
+        <a href="APNA_AMAZON_LINK" class="btn btn-amazon">💻 Best Student Laptops (HP/Dell)</a>
+        <a href="APNA_AMAZON_LINK" class="btn btn-amazon">🎧 Accessories & Headphones Deals</a>
+        <a href="APNA_AMAZON_LINK" class="btn btn-amazon">👕 Fashion Trending (60% Off)</a>
+    </div>
+!-- 💻 STEP 5: LAPTOPS & GADGETS SECTION START -->
+<h2 id="gadgets" class="section-title">💻 Laptops & Student Gadgets</h2>
 <div class="container">
-    <div class="box" style="border-color: #ff4486;">
-        <div class="card-content">
-            <h3>Trending Fashion</h3>
-            <p style="font-size:12px; color:gray;">Latest Deals from Amazon, Meesho & Flipkart</p>
-            <a href="https://amzn.to/4sbKilY" class="btn-amazon" target="_blank">Amazon Deals (Trending)</a>
-            <a href="MEESHO_LINK" class="btn-amazon" style="background:#ff4486; color:white; border:none;">Meesho Fashion</a>
-            <a href="FLIPKART_LINK" class="btn-amazon" style="background:#2874f0; color:white; border:none;">Flipkart Offers</a>
+    <div class="box" style="border-top: 6px solid #334155; grid-column: 1 / -1;">
+        <h3 style="color: #475569;">Best Tech for Students & Professionals</h3>
+        <p style="font-size: 14px; color: #64748b;">Education aur Jobs ki taiyari ke liye sahi tech ka hona zaroori hai. Niche diye gaye Amazon links se best discounts par gadgets khareedein.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+            
+            <!-- Laptop Item -->
+            <div style="background: #f8fafc; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                <span style="font-size: 40px;">💻</span>
+                <h4 style="margin: 10px 0; font-size: 16px;">Best Student Laptops</h4>
+                <p style="font-size: 12px; margin-bottom: 10px;">HP, Dell, & Lenovo (Intel i3/i5)</p>
+                <a href="APNA_AMAZON_LINK" target="_blank" style="background: #fbbf24; color: black; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 12px; display: inline-block;">Check Amazon Price</a>
+            </div>
+
+            <!-- Headphones Item -->
+            <div style="background: #f8fafc; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                <span style="font-size: 40px;">🎧</span>
+                <h4 style="margin: 10px 0; font-size: 16px;">Study Headphones</h4>
+                <p style="font-size: 12px; margin-bottom: 10px;">Noise Cancelling for Focus</p>
+                <a href="APNA_AMAZON_LINK" target="_blank" style="background: #fbbf24; color: black; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 12px; display: inline-block;">View Deals</a>
+            </div>
+
+            <!-- Accessories Item -->
+            <div style="background: #f8fafc; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                <span style="font-size: 40px;">🔋</span>
+                <h4 style="margin: 10px 0; font-size: 16px;">Accessories</h4>
+                <p style="font-size: 12px; margin-bottom: 10px;">Powerbanks, Mouse & Keyboards</p>
+                <a href="APNA_AMAZON_LINK" target="_blank" style="background: #fbbf24; color: black; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 12px; display: inline-block;">Shop Accessories</a>
+            </div>
+
+        </div>
+        
+        <div style="margin-top: 20px; text-align: center; background: #fffbeb; padding: 10px; border-radius: 10px; border: 1px dashed #f59e0b;">
+            <p style="font-size: 12px; color: #92400e; margin: 0;"><b>AdSense Tip:</b> "Best Laptops for Students in India 2026" jaise keywords use karne se traffic badhta hai.</p>
         </div>
     </div>
 </div>
+<!-- 💻 GADGETS SECTION END -->
+    <!-- ⚖️ ABOUT / PRIVACY (GOOGLE READY) -->
+    <div class="box" id="about" style="background:#f0fdf4; border:none; text-align:center;">
+        <h3>About & Legal Info</h3>
+        <p><b>About Us:</b> Rajesh Mega Portal Uttarakhand ka ek personal initiative hai jo 12th pass students ko Engineering, Medical, Arts aur Jobs ki guide karta hai.<br>
+        <b>Privacy Policy:</b> Hum Amazon Affiliate aur Google AdSense ka upyog karte hain. Data safe hai.</p>
+        <p>Email: <b>support@rajeshportal.com</b></p>
+    </div>
 
-<!-- WhatsApp Support -->
-<a href="https://wa.me" class="whatsapp-float" target="_blank">
-    <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-</a>
+</div>
 
-<footer style="background: #111; color: white; text-align: center; padding: 25px; margin-top: 50px;">
-    <p>© 2026 RD Mega Portal | Uttarakhand ❤️</p>
-</footer>
+<!-- WhatsApp -->
+<a href="https://wa.me" class="wa-float" target="_blank">💬</a>
+
+<!-- Navigation Bar -->
+<div class="bottom-nav">
+    <a href="#" class="active"><span>🏠</span>Home</a>
+    <a href="#jobs"><span>💼</span>Jobs</a>
+    <a href="#college"><span>🎓</span>Colleges</a>
+    <a href="#shopping"><span>🛍️</span>Deals</a>
+    <a href="#about"><span>ℹ️</span>Info</a>
+</div>
 
 </body>
 </html>
-
