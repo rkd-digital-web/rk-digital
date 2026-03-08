@@ -31,15 +31,13 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     
     <style>
-        /* Aapka purana saara style yahan aayega */
-        :root { 
-        /* Professional Sky Blue & Teal Shades */
-        --primary: #1e3a8a;    /* Deep Blue for Headings */
-        --accent: #38bdf8;     /* Sky Blue for Borders/Buttons */
-        --bg: #f0f9ff;         /* Very Light Sky Blue Background */
-        --card-bg: #ffffff;    /* Clean White for Boxes */
-        --text: #1e293b;       /* Soft Dark Text */
-        --secondary: #0ea5e9;  /* Medium Sky Blue */
+    /* 1. Global Variables & Basic Setup */
+    :root { 
+        --primary: #1e3a8a;    /* Deep Blue */
+        --accent: #38bdf8;     /* Sky Blue */
+        --bg: #f0f9ff;         /* Light Background */
+        --card-bg: #ffffff;    /* White Card */
+        --text: #1e293b;       /* Dark Text */
     }
 
     body { 
@@ -47,27 +45,14 @@
         margin: 0; 
         background: var(--bg); 
         color: var(--text); 
-        font-size: 16px;       /* Font size wapas bada kar diya */
+        font-size: 16px;
         line-height: 1.6; 
         scroll-behavior: smooth; 
+        padding-bottom: 70px; /* Space for bottom nav */
     }
 
-    /* Boxes ko thoda aur professional 'Card' look dene ke liye */
-    .box { 
-        background: var(--card-bg); 
-        border-radius: 15px; 
-        padding: 25px; 
-        margin-bottom: 25px; 
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); /* Soft Shadow */
-        border: 1px solid #e0f2fe; /* Light Blue Border */
-        transition: transform 0.3s ease;
-    }
-
-    .box:hover {
-        transform: translateY(-5px); /* Choti si movement professional lagti hai */
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-     header { 
+    /* 2. Header & Navigation */
+    header { 
         background: var(--primary); 
         color: white;               
         padding: 25px 20px;         
@@ -77,48 +62,90 @@
         z-index: 1000;              
         box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
     }
+
     .ticker-wrap { 
-        background: #1e40af; /* Deep Blue */
+        background: #1e40af; 
         color: white; 
         padding: 12px 0; 
         font-weight: bold;
     }
 
-    .quick-item { 
-        background: #eff6ff; /* Light Blue */
-        color: #1e3a8a;
-        border-bottom: 4px solid #38bdf8;
-    }
+    /* 3. Grid & Cards */
     .quick-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; /* Do line mein dabe dikhane ke liye */
-    gap: 12px; 
-    padding: 15px; 
-    max-width: 1100px; 
-    margin: 0 auto; 
-}
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 12px; 
+        padding: 15px; 
+        max-width: 1100px; 
+        margin: 0 auto; 
+    }
 
-.quick-item { 
-    display: block; /* Ise active karne ke liye */
-    background: #eff6ff; 
-    padding: 18px; 
-    border-radius: 16px; 
-    text-align: center; 
-    text-decoration: none; 
-    color: #1e3a8a; 
-    font-weight: 800; 
-    font-size: 14px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-    border-bottom: 4px solid #38bdf8; 
-    transition: 0.3s; 
-}
+    .quick-item { 
+        display: block; 
+        background: #eff6ff; 
+        padding: 18px; 
+        border-radius: 16px; 
+        text-align: center; 
+        text-decoration: none; 
+        color: var(--primary); 
+        font-weight: 800; 
+        font-size: 14px; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+        border-bottom: 4px solid var(--accent); 
+        transition: 0.3s; 
+    }
 
-.quick-item span { 
-    display: block; 
-    font-size: 28px; 
-    margin-bottom: 5px; 
-}
-    </style> 
+    .quick-item span { 
+        display: block; 
+        font-size: 28px; 
+        margin-bottom: 5px; 
+    }
+
+    .box { 
+        background: var(--card-bg); 
+        border-radius: 15px; 
+        padding: 25px; 
+        margin-bottom: 25px; 
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); 
+        border: 1px solid #e0f2fe; 
+        transition: 0.3s;
+    }
+
+    /* 4. PROFESSIONAL BOTTOM NAVIGATION (Horizontal) */
+    .bottom-nav { 
+        position: fixed; 
+        bottom: 0; 
+        left: 0; 
+        right: 0; 
+        background: white; 
+        display: flex; 
+        justify-content: space-around; 
+        align-items: center;
+        padding: 10px 0; 
+        border-top: 1px solid #e2e8f0; 
+        z-index: 2000; 
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+
+    .bottom-nav a { 
+        text-decoration: none; 
+        color: #64748b; 
+        font-size: 11px; 
+        text-align: center; 
+        font-weight: 700; 
+        flex: 1; /* Space items equally */
+    }
+
+    .bottom-nav a span { 
+        display: block; 
+        font-size: 22px; 
+        margin-bottom: 2px;
+    }
+
+    .bottom-nav a:hover, .bottom-nav a.active { 
+        color: var(--primary); 
+    }</style>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9082477975209540"
      crossorigin="anonymous"></script>
 </head>
@@ -232,7 +259,10 @@
                 </p>
                 <a href="http://www.ihmdehradun.com" target="_blank" style="color:#d946ef; font-weight:bold; text-decoration:none; font-size:13px;">IHM Dehradun Official Site 🔗</a>
             </div>
-
+<div class="box" style="border-left: 5px solid #22c55e; background: #f0fdf4; margin-top: 15px;">
+            <h4 style="color: #166534; margin: 0;">5. Nursing & Pharmacy (B.Sc / ANM / GNM)</h4>
+            <p style="font-size: 13px;">Uttarakhand mein Health sector mein jobs ki bahut demand hai. <b>Colleges:</b> Government Nursing College Dehradun, Haldwani.</p>
+        </div>
             <!-- Management & Commerce -->
             <div style="background: #f0f9ff; padding: 15px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #0ea5e9;">
                 <h4 style="margin: 0; color: #0369a1;">2. BBA / B.Com / Eco Hons</h4>
@@ -332,7 +362,15 @@
         </ul>
         <a href="https://cuet.samarth.ac.in" class="btn btn-main">Apply for CUET UG</a>
     </div>
-
+<h2 class="section-title">Upcoming Jobs 2026 📢</h2>
+<div class="box" style="border-top: 5px solid #f97316;">
+    <h3 style="color: #c2410c;">Inka Intezar Karein:</h3>
+    <ul style="line-height: 2;">
+        <li>🚀 <b>Uttarakhand LT Teacher:</b> Notification Coming Soon</li>
+        <li>📑 <b>UKPSC Group C (Patwari/Lekhpal):</b> New Vacancy Expected</li>
+        <li>👮 <b>Police Sub-Inspector (SI):</b> Physical Dates Coming</li>
+    </ul>
+</div>
     <!-- 💻 TECH & ACCESSORIES (AFFILIATE) -->
     <h2 id="shopping" class="section-title">💻 Laptops & Accessories</h2>
     <div class="box">
@@ -376,17 +414,33 @@
             </div>
 
         </div>
-        
+        <div class="box" style="border-left: 5px solid #22c55e; background: #f0fdf4;">
+    <h4 style="color: #166534; margin: 0;">5. Nursing & Pharmacy (B.Sc / ANM / GNM)</h4>
+    <p style="font-size: 13px;">Uttarakhand mein Health sector mein jobs ki bahut demand hai. <b>Colleges:</b> Government Nursing College Dehradun, Haldwani.</p>
+</div>
+
+<div class="box" style="border-left: 5px solid #ef4444; background: #fef2f2;">
+    <h4 style="color: #991b1b; margin: 0;">6. ITI & Polytechnic (Technical Skills)</h4>
+    <p style="font-size: 13px;">10th ke baad turant naukri ke liye best option. <b>Exams:</b> JEEP (Joint Entrance Examination Polytechnics).</p>
+</div>
         <div style="margin-top: 20px; text-align: center; background: #fffbeb; padding: 10px; border-radius: 10px; border: 1px dashed #f59e0b;">
-            <p style="font-size: 12px; color: #92400e; margin: 0;"><b>AdSense Tip:</b> "Best Laptops for Students in India 2026" jaise keywords use karne se traffic badhta hai.</p>
+            <p style="font-size: 12px; color: #92400e; margin: 0;"></p>
         </div>
     </div>
 </div>
 <!-- 💻 GADGETS SECTION END -->
+ <div class="box" style="line-height: 1.8; text-align: justify; border-top: 5px solid #1e3a8a;">
+    <h3 style="color: #1e3a8a;">🏔️ Uttarakhand Career & Education Guide 2026</h3>
+    <p>Uttarakhand mein sarkari naukri (Govt Jobs) ki taiyari karna ek chunauti bhara kaam hai, lekin sahi margdarshan (guidance) se ise aasaan banaya ja sakta hai. Hamara portal Uttarakhand ke bacho ko UKPSC, UKSSSC, aur Police Bharti se judi har choti-badi jaankari sabse pehle dene ki koshish karta hai. 12th pass hone ke baad aksar bache confuse rehte hain ki unhe Defence mein jaana chahiye ya Medical sector mein.</p>
+    
+    <p>Himalayi rajya hone ke nate, Uttarakhand mein Tourism aur Hospitality sector mein bhi bahut sunhare mauke hain. IHM Dehradun jaise institutes se Hotel Management karke aap desh-videsh mein apna career bana sakte hain. Iske alawa, Nursing aur Pharmacy ke kshetra mein bhi Uttarakhand ne kaafi unnati ki hai, jahan sarkari aur private dono sectors mein dheron vacancies aati rehti hain.</p>
+    
+    <p>Taiyari ke liye sirf online links kaafi nahi hain, bacho ko sahi kitabon (Best Books) aur pichle saal ke papers (Previous Year Papers) ka abhyas karna chahiye. Hum yahan Amazon ke madhyam se unhi kitabon ka sujhav dete hain jo experts dwara batai gayi hain. Yaad rakhiye, mehnat ka koi vikalp nahi hota, aur sahi samay par li gayi jaankari hi aapko kamyabi dila sakti hai.</p>
+</div>
     <!-- ⚖️ ABOUT / PRIVACY (GOOGLE READY) -->
     <div class="box" id="about" style="background:#f0fdf4; border:none; text-align:center;">
         <h3>About & Legal Info</h3>
-        <p><b>About Us:</b> Rajesh Mega Portal Uttarakhand ka ek personal initiative hai jo 12th pass students ko Engineering, Medical, Arts aur Jobs ki guide karta hai.<br>
+        <p><b>About Us:</b> UK Mega Portal Uttarakhand ka ek personal initiative hai jo 12th pass students ko Engineering, Medical, Arts aur Jobs ki guide karta hai.<br>
         <b>Privacy Policy:</b> Hum Amazon Affiliate aur Google AdSense ka upyog karte hain. Data safe hai.</p>
         <p>Email: <b>support@rajeshportal.com</b></p>
     </div>
@@ -397,13 +451,7 @@
 <a href="https://wa.me/919911998338" class="wa-float" target="_blank">💬</a>
 
 <!-- Navigation Bar -->
-<div class="bottom-nav">
-    <a href="#" class="active"><span>🏠</span>Home</a>
-    <a href="#jobs"><span>💼</span>Jobs</a>
-    <a href="#college"><span>🎓</span>Colleges</a>
-    <a href="#shopping"><span>🛍️</span>Deals</a>
-    <a href="#about"><span>ℹ️</span>Info</a>
-</div>
+
 <!-- 1. MOBILE BOTTOM NAVIGATION (Home, Jobs, Deals) -->
 <div style="position: fixed; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 12px; border-top: 1px solid #e2e8f0; z-index: 1001; box-shadow: 0 -2px 10px rgba(0,0,0,0.05);">
     <a href="#home" style="text-decoration:none; color:#64748b; font-size:11px; text-align:center; font-weight:700;">🏠<br>Home</a>
@@ -414,14 +462,11 @@
 
 <!-- 2. WHATSAPP FLOATING BUTTON (Hara Gol Button) -->
 <a href="https://wa.me/919911998338" target="_blank" style="position: fixed; bottom: 85px; right: 20px; background: #22c55e; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); z-index: 2000; text-decoration: none;">💬</a>
-<footer style="text-align: center; padding: 30px; background: #1e3a8a; color: white; margin-top: 50px; font-size: 14px;">
-    <div style="margin-bottom: 15px;">
-        <a href="#" style="color: #38bdf8; text-decoration: none; margin: 0 10px;">About Us</a> | 
-        <a href="#" style="color: #38bdf8; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
-        <a href="#" style="color: #38bdf8; text-decoration: none; margin: 0 10px;">Contact Us</a>
+<div class="bottom-nav">
+        <a href="index.html"><span>🏠</span><br>Home</a>
+        <a href="jobs.html"><span>💼</span><br>Jobs</a>
+        <a href="about.html"><span>ℹ️</span><br>About</a>
+        <a href="privacy.html"><span>🔒</span><br>Privacy</a>
     </div>
-    <p>&copy; 2026 UK Mega Portal | Uttarakhand Career Guide</p>
-    <p style="font-size: 11px; opacity: 0.7;">Email: support@rajeshportal.com</p>
-</footer>
 </body>
 </html>

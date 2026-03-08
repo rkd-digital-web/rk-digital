@@ -1,52 +1,64 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | UK Mega Portal</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #f0f9ff; margin: 0; padding-bottom: 80px; }
+        header { background: #1e3a8a; color: white; padding: 25px; text-align: center; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h2 { color: #1e3a8a; border-bottom: 3px solid #38bdf8; display: inline-block; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 15px; border-top: 1px solid #ddd; }
+        .bottom-nav a { text-decoration: none; color: #64748b; font-size: 12px; text-align: center; }
+    bottom-nav { 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background: white; 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 12px 5px; 
+    border-top: 1px solid #e2e8f0; 
+    z-index: 2000; 
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
 
-<style>
-    body {
-        background-color: #f4f7f6; /* Halka grey professional background */
-        font-family: 'Segoe UI' , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    nav a:hover {
-        background-color: #555; /* Mouse le jaane par menu link ka rang badlega */
-        border-radius: 5px;
-    }
-    @media (max-width: 600px) {
-        #clock {
-            font-size: 30px; /* Mobile par ghari choti dikhe */
-        }
-        nav a {
-            display: block; /* Menu Links ek ke niche ek aa jayenge */
-            margin: 5px 0;
-        }
-        button {
-            width: 90%;/* Button mobile ki poori width Lega */
-        }
-    }
-    
-</style>
-<nav style="background-color: #333; padding: 15px; text-align: center;">
-    <a href="index.html" style="color: white; margin: 10px; text-decoration: none;">Home</a>
-    <a href="about.html" style="color: white; margin: 10px; text-decoration: none;">About</a>
-    <a href="contact.html" style="color: white; margin: 10px; text-decoration: none;">Contact</a></nav>
-    
-<h1 style="text-align: center; color: #333; margin-top: 30px;">Mere Baare Mein</h1>
-<p style="text-align: center; font-family: Arial; font-size: 18px; color: #666; max-width: 600px; margin: 20px auto;">Namaste! Mera naam <b>RAJESH KUMAR</b> hai. Main ek software developor banne ki padai kar raha hoon aur mujhe naye-naye apps banana pasand hai.</p>
-<div style="text-align: center; margin-top: 30px;">
-  <h3>Mera Favorite Video</h3>
+.bottom-nav a { 
+    text-decoration: none; 
+    color: #64748b; 
+    font-size: 11px; 
+    text-align: center; 
+    font-weight: 700; 
+    flex: 1;
+}
 
- <iframe width="560" height="315" 
- src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+.bottom-nav a span { 
+    display: block; 
+    font-size: 22px; 
+    margin-bottom: 2px;
+}
 
-  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-<footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 50px;">
-  <p>&copy; <span id="year"></span> Rajesh Kumar | All Rights Reserved</p>
-</footer>
-<script>
-  document.getElementById("year").innerHTML = new Date().getFullYear();
-</script>
-
-
-</div>
-<h1>Yeh mera About Page hai</h1>
-
+.bottom-nav a:hover, .bottom-nav a.active { 
+    color: #1e3a8a; /* Blue color click karne par */
+}
+    </style>
+</head>
+<body>
+    <header><h1>About UK Mega Portal</h1></header>
+    <div class="container">
+        <h2>Hamara Maqsad 🎯</h2>
+        <p>UK Mega Portal Uttarakhand ke naujavano ke liye ek career guide hai. Hum UKPSC, UKSSSC aur anya sarkari naukriyon ki jaankari sabse pehle dete hain.</p>
+        <p>Humara uddeshya har bache tak sahi career guidance aur education pahunchana hai.</p>
+        <p><b>Contact:</b> coolsmart26@gmail.com</p>
+    </div>
+    <div class="bottom-nav">
+        <a href="index.html"><span>🏠</span><br>Home</a>
+        <a href="jobs.html"><span>💼</span><br>Jobs</a>
+        <a href="about.html"><span>ℹ️</span><br>About</a>
+        <a href="privacy.html"><span>🔒</span><br>Privacy</a>
+    </div>
+</body>
+</html>
