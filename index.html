@@ -110,6 +110,18 @@
         border: 1px solid #e0f2fe; 
         transition: 0.3s;
     }
+      .box:hover {
+    transform: translateY(-5px); /* Upar ki taraf movement */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); /* Gehra shadow */
+    border-color: #38bdf8; /* Border neela ho jayega */
+    cursor: pointer;
+}
+
+/* Quick buttons ke liye bhi movement */
+.quick-item:hover {
+    transform: scale(1.05); /* Thoda bada dikhega */
+    background: #dbeafe;
+}
 
     /* 4. PROFESSIONAL BOTTOM NAVIGATION (Horizontal) */
     .bottom-nav { 
@@ -475,5 +487,6 @@
 </body>
 
 </html>
+
 
 
